@@ -1,9 +1,9 @@
-using Plots,ApproxFun
+using Plots, ApproxFun
 
 #The following samples eigenvalues of an n = 2 Gaussian Unitary Ensemble:
 
-ff=(x,y)->(x-y)^2*exp(-x^2/2-y^2/2)
-f=Fun(ff,(-4..4)^2)
+ff = (x,y)->(x-y)^2*exp(-x^2/2-y^2/2)
+f = Fun(ff,Domain(-4..4)^2)
 r=ApproxFun.sample(f,5000)
 
 

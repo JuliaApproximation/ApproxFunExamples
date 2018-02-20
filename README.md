@@ -1,2 +1,3 @@
 # ApproxFunExamples
-Examples for using ApproFun.jl
+
+Examples for using ApproxFun.jl
