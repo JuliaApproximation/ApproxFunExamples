@@ -10,7 +10,7 @@ B=Dirichlet()              # Dirichlet boundary conditions, [u(-100),u(15)]
 #Construct operator
 
 A=[B;D^2-x]                # This is dirichlet conditions and u'' - x u
-b=[airyai(first(d)),0]     # We want it to equal airyai(-100) at -100, and 0 at
+b=[airyai(leftendpoint(d)),0]     # We want it to equal airyai(-100) at -100, and 0 at
                            # 10, with 0 rhs
 #Solve ODE
 
@@ -25,7 +25,7 @@ norm(u - Fun(airyai,d))
 
 B=Neumann()
 A=[B;D^2-x]
-b=[[airyaiprime(first(d)),0.],0.]
+b=[[airyaiprime(leftendpoint(d)),0.],0.]
 
 u=A\b
 

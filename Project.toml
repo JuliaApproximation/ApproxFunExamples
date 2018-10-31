@@ -1,0 +1,8 @@
+name = "ApproxFunExamples"
+uuid = "d9fa014c-dd2a-11e8-3dc0-1b08f06e080d"
+authors = ["Sheehan Olver <solver@mac.com>"]
+version = "0.1.0"
+
+[deps]
+ApproxFun = "28f2ccd6-bb30-5033-b560-165f7b14dc2f"
+BlockBandedMatrices = "ffab5731-97b5-5995-9138-79e8c1846df0"

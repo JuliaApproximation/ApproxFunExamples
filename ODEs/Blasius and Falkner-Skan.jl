@@ -25,7 +25,7 @@ df = (u)->(2.0*D^3 + u*D^2 + D^2*u)
 plot([u,u0])      # Initial estimate and first-order approximation
 
 for k=1:10
-  u  -= [B; df(u)]\[u(0.);u'(0.);u'(d.b)-1.;f(u)]
+    global u  -= [B; df(u)]\[u(0.);u'(0.);u'(rightendpoint(d))-1.;f(u)]
 end
 norm(f(u))             # should be zero
 abs(u''(0.)-κ)         # should also be zero
@@ -40,7 +40,7 @@ v=u
 norm(F(v))               # should be non-zero, as we've perturbed the Blasius equation
 
 for k=1:10
-  v  -= [B; dF(v)]\[v(0.);v'(0.);v'(d.b)-1.;F(v)]
+  global v  -= [B; dF(v)]\[v(0.);v'(0.);v'(rightendpoint(d))-1.;F(v)]
 end
 norm(F(v))               # should be zero
 
