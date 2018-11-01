@@ -1,4 +1,4 @@
-using ApproxFun,DualNumbers,Plots
+using ApproxFun, DualNumbers, LinearAlgebra, Plots
     import ApproxFun: DualFun, jacobian
 
 x=Fun(-π..π)
@@ -9,6 +9,7 @@ T0=Tk=0.
 
     (T,u)=(T0,u0)
     for k=1:4
+        global T,u
         J1=jacobian.(N(DualFun(Fun(T)),u))
         J2=jacobian.(N(T,DualFun(u)))
         J=Operator[J1 J2]

@@ -1,4 +1,4 @@
-using ApproxFun
+using ApproxFun, SpecialFunctions, LinearAlgebra
 
 include("../ODEs/Airy equation.jl")
 include("../ODEs/Blasius and Falkner-Skan.jl")
@@ -8,5 +8,3 @@ include("../ODEs/Newton iteration for nonlinear BVPs.jl")
 include("../ODEs/Picard iteration.jl")
 include("../ODEs/Quantum states.jl")
 include("../ODEs/Tenth order ODE.jl")
-
-ls
