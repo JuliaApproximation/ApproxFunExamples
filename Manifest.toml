@@ -6,15 +6,15 @@ version = "0.3.2"
 
 [[ApproxFun]]
 deps = ["AbstractFFTs", "BandedMatrices", "BlockArrays", "BlockBandedMatrices", "Calculus", "DSP", "DomainSets", "DualNumbers", "FFTW", "FastGaussQuadrature", "FastTransforms", "FillArrays", "InfiniteArrays", "IntervalSets", "LazyArrays", "LinearAlgebra", "LowRankApprox", "Random", "RecipesBase", "SparseArrays", "SpecialFunctions", "StaticArrays", "Statistics", "Test", "ToeplitzMatrices"]
-path = "/Users/solver/Projects/ApproxFun.jl"
+path = "/Users/sheehanolver/.julia/dev/ApproxFun"
 uuid = "28f2ccd6-bb30-5033-b560-165f7b14dc2f"
 version = "0.9.0+"
 
 [[BandedMatrices]]
 deps = ["FillArrays", "LazyArrays", "LinearAlgebra", "Random", "SparseArrays", "Test"]
-git-tree-sha1 = "89f5c8110f784cacec900e996e81c1389ddd62a3"
+path = "/Users/sheehanolver/.julia/dev/BandedMatrices"
 uuid = "aae01518-5342-5314-be14-df237901396f"
-version = "0.7.0"
+version = "0.7.0+"
 
 [[Base64]]
 uuid = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
@@ -181,9 +181,9 @@ version = "0.19.0"
 
 [[LazyArrays]]
 deps = ["FillArrays", "LinearAlgebra", "StaticArrays", "Test"]
-git-tree-sha1 = "44fcd4f946a1e4cc302568eb6c7aba2bfc161911"
+path = "/Users/sheehanolver/.julia/dev/LazyArrays"
 uuid = "5078a376-72f3-5289-bfd5-ec5146d43c02"
-version = "0.3.1"
+version = "0.3.1+"
 
 [[LibGit2]]
 uuid = "76f85450-5226-5b5a-8eaa-529ad045b433"
