@@ -12,14 +12,14 @@ import ApproxFun: bandwidth
 # To answer this question, we use a dual number to observe the sensitivity in λ₀
 # with respect to perturbations in b. The `realpart` of the objective function
 #
-#    f(λ) = λ - 1,
+#    f(λ(b)) = λ(b) - 1,
 #
-# extracts the difference, whereas the `dualpart` evaluates to f'(λ).
+# extracts the difference, whereas the `dualpart` evaluates to ∂f/∂b (λ(b)).
 #
 
 n = 100
-λ = dual(0.0,0.0)
-b = dual(eps(), 1.0)
+λ = dual(0.0, 0.0)
+b = dual(0.0, 1.0)
 v = zeros(Dual{Float64}, n)
 v[1] = 1
 v .+= 0.003.*randn(Float64, n)
