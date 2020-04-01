@@ -9,7 +9,8 @@
 # C is a conversion matrix and L is the Laplacian.
 ####
 
-using ApproxFun, DifferentialEquations
+using ApproxFun
+using LinearAlgebra: I
 
 S = Chebyshev()
 D = Derivative() : S
@@ -34,7 +35,7 @@ L = D^2
 #
 # B*u_t = 0
 #
-# We can then use this to eliminate dependnence on the first two columns to get
+# We can then use this to eliminate dependence on the first two columns to get
 #
 # M*u_t = L*u
 #
@@ -61,9 +62,9 @@ u₀ = Fun(exp, S)
 c₀ = pad(u₀.coefficients,n)
 r = B*c₀ # boundary condition values, assume they stay fixed here
 
-
+using Plots
 p = plot(u₀; legend=false, ylims=1:6)
-@gif for t in 0.0:0.1:100
+@gif for t in 0.0:0.1:10
     c̃_t = exp(A*t)*c₀[3:n]
 
     c_t =
