@@ -1,6 +1,5 @@
-using ApproxFun, Plots
+using ApproxFun, Plots, LinearAlgebra
 import ApproxFun: factor, component
-using LinearAlgebra: I, ×
 
 L = 1.0
 T = 0.1

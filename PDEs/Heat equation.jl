@@ -9,8 +9,7 @@
 # C is a conversion matrix and L is the Laplacian.
 ####
 
-using ApproxFun
-using LinearAlgebra: I
+using ApproxFun, Plots, LinearAlgebra
 
 S = Chebyshev()
 D = Derivative() : S
@@ -62,7 +61,6 @@ u₀ = Fun(exp, S)
 c₀ = pad(u₀.coefficients,n)
 r = B*c₀ # boundary condition values, assume they stay fixed here
 
-using Plots
 p = plot(u₀; legend=false, ylims=1:6)
 @gif for t in 0.0:0.1:10
     c̃_t = exp(A*t)*c₀[3:n]
