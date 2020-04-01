@@ -1,11 +1,10 @@
 using ApproxFun, Plots
 import ApproxFun: factor, component
-import ApproxFun: DomainSets.cartesianproduct
-using LinearAlgebra: I
+using LinearAlgebra: I, ×
 
 L = 1.0
 T = 0.1
-d = cartesianproduct(Interval(0.,T), Interval(0.,L))
+d = Interval(0.,T) × Interval(0.,L)
 Dx = Derivative(d,[0,1])
 Dt = Derivative(d,[1,0])
 
