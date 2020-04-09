@@ -1,4 +1,4 @@
-using ApproxFun, Plots
+using ApproxFun, Plots, LinearAlgebra
 import ApproxFun: factor, component
 
 L = 1.0
