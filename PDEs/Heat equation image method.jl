@@ -38,11 +38,11 @@ L = Derivative(S, 2)
    L = Matrix(L[1:2m,1:2m])
 
 @manipulate for T=[zeros(5); 0.0:0.01:1]
-   uₜ = Fun(S, exp(T*L)*c₀) + r # calculate solution and add back homogenisation term
-   plot(-0:0.05:10, uₜ, ylims=(0,1), legend=:none)
+   u_t = Fun(S, exp(T*L)*c₀) + r # calculate solution and add back homogenisation term
+   plot(-0:0.05:10, u_t, ylims=(0,1), legend=:none)
 end
 
 @gif for T=[zeros(5); 0.0:0.5:50]
-   uₜ = Fun(S, exp(T*L)*c₀) + r # calculate solution and add back homogenisation term
-   plot(-0:0.05:10, uₜ, ylims=(0,1), legend=:none)
+   u_t = Fun(S, exp(T*L)*c₀) + r # calculate solution and add back homogenisation term
+   plot(-0:0.05:10, u_t, ylims=(0,1), legend=:none)
 end
