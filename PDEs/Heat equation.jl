@@ -1,11 +1,11 @@
 ####
-# The following solves heat equation with Robin boundary conditions.
+# The following solves heat equation with mixed boundary conditions.
 # we first formulate the construction as
 #
 # B*u = r
 # C*u_t = L*u
 #
-# where B represents the Robin boundary conditions, r is their values
+# where B represents the mixed boundary conditions, r is their values
 # C is a conversion matrix and L is the Laplacian.
 ####
 
@@ -18,7 +18,7 @@ C = I : domainspace(D) → rangespace(D)
 
 n = 10
 #
-# Here we construct the Robin conditions. it is beneficial if the principle
+# Here we construct the boundary conditions. it is beneficial if the principle
 # sub block is identity
 #
 B = [ldirichlet(S); rneumann(S)]
