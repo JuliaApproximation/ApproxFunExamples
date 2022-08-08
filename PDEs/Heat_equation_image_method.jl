@@ -1,4 +1,4 @@
-using ApproxFun, LinearAlgebra, Plots
+using ApproxFun, LinearAlgebra, Plots, Interact
 
 # In this example, we solve the heat equation with left Neumann and
 # right Dirichlet boundary conditions.
@@ -35,7 +35,7 @@ f = Fun(S, c₀) # Likely not a good approximation due to boundary discontinuiti
    scatter!(xarray, u₀, markersize=0.2)
 
 L = Derivative(S, 2)
-   L = Matrix(L[1:2m,1:2m])
+L = Matrix(L[1:2m,1:2m])
 
 @manipulate for T=[zeros(5); 0.0:0.01:1]
    u_t = Fun(S, exp(T*L)*c₀) + r # calculate solution and add back homogenisation term
