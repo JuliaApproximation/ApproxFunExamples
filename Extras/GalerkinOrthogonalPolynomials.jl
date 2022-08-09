@@ -1,4 +1,6 @@
-using ApproxFun, Plots
+using ApproxFun
+using Plots
+using LinearAlgebra
 
 # In this example, we numerically compute with Galerkin orthogonal polynomials.
 # If H is a separable Hilbert space and B contains ν linear functional constraints,

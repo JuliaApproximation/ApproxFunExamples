@@ -1,4 +1,6 @@
-using Plots, ApproxFun
+using Plots
+using ApproxFun
+using LinearAlgebra
 # The Blasius boundary layer problem (https://en.wikipedia.org/wiki/Blasius_boundary_layer)
 # describes the boundary layer on a semi-infinite plane with a head-on steady fluid flow.
 # When properly non-dimensionalized, it presents itself as a relatively simple nonlinear BVP.
