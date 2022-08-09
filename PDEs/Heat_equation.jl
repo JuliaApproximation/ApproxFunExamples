@@ -22,8 +22,8 @@ n = 10
 # sub block is identity
 #
 B = [ldirichlet(S); rneumann(S)]
-    B = B[1:2,1:n]
-    B = B[1:2,1:2]\B
+B = B[1:2,1:n]
+B = B[1:2,1:2]\B
 
 
 
@@ -53,8 +53,8 @@ L = D^2
 
 
 M = C[1:n-2,1:n]
-    M = M - M[:,1:2]*B # remove degrees of freedom
-    A = M[:,3:end]\L[1:n-2,3:n]
+M = M - M[:,1:2]*B # remove degrees of freedom
+A = M[:,3:end]\L[1:n-2,3:n]
 
 
 u₀ = Fun(exp, S)

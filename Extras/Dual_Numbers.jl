@@ -3,8 +3,10 @@
 # changes in parameters
 ##
 
+using DualNumbers
+using ApproxFun
+using LinearAlgebra
 
-using DualNumbers, ApproxFun
 # What is the derivative of the function (without differentiating the Chebyshev expansion)?
 f=Fun(x->exp(dual(x,1)),-1..1)
 dualpart(f)

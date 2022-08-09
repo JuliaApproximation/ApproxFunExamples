@@ -1,4 +1,5 @@
 using ApproxFun
+using LinearAlgebra
 
 x=Fun(identity)
 D=Derivative()

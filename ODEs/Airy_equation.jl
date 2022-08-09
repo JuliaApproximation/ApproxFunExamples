@@ -1,4 +1,6 @@
 using ApproxFun
+using SpecialFunctions
+using LinearAlgebra
 
 #The following solves the Airy ODE with dirichlet boundary conditions
 
